@@ -1,5 +1,5 @@
 locals {
-  aws_alb_ingress_controller_docker_image = "docker.io/amazon/aws-alb-ingress-controller:v${var.aws_alb_ingress_controller_version}"
+  aws_alb_ingress_controller_docker_image = "public.ecr.aws/eks/aws-load-balancer-controller:v${var.aws_alb_ingress_controller_version}"
   aws_alb_ingress_controller_version      = var.aws_alb_ingress_controller_version
   aws_alb_ingress_class                   = "alb"
   aws_vpc_id                              = data.aws_vpc.selected.id
